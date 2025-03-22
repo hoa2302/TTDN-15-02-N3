@@ -18,8 +18,6 @@
                             <field name="que_quan"/>
                             <field name="email"/>
                             <field name="so_dien_thoai"/>
-                            <field name="phong_ban_id"/>
-                            <field name="chuc_vu_id"/>
                         </group>
                         <notebook>
                             <page string="Danh sách lịch sử công tác">
@@ -44,8 +42,6 @@
                     <field name="que_quan"/>
                     <field name="email"/>
                     <field name="so_dien_thoai"/>
-                    <field name="phong_ban_id"/>
-                    <field name="chuc_vu_id"/>
                 </tree>
             </field>
         </record>
@@ -54,7 +50,6 @@
             <field name="model">nhan_vien</field>
             <field name="arch" type="xml">
                 <search>
-                
                     <field name="ma_dinh_danh"/>
                     <field name="ho_ten_dem"/>
                     <field name="ten"/>
@@ -64,8 +59,6 @@
                     <field name="que_quan"/>
                     <field name="email"/>
                     <field name="so_dien_thoai"/>
-                    <field name="phong_ban_id"/>
-                    <field name="chuc_vu_id"/>
                 </search>
             </field>
         </record>

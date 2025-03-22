@@ -4,8 +4,8 @@ from datetime import date
 class NhanVien(models.Model):
     _name = 'nhan_vien'
     _description = 'Bảng chứa thông tin nhân viên'
-    _rec_name = "ma_dinh_danh"
-
+    _rec_name = "ho_va_ten"
+    
     ma_dinh_danh = fields.Char("Mã định danh", required=True)
     ho_ten_dem = fields.Char("Họ tên đệm", required=True)
     ten = fields.Char("Tên", required=True)
@@ -20,8 +20,6 @@ class NhanVien(models.Model):
         inverse_name="nhan_vien_id",
         string="Danh sách lịch sử làm việc"
     )
-    phong_ban_id = fields.Many2one('phong_ban', string="Phòng ban", required=True)
-    chuc_vu_id = fields.Many2one('chuc_vu', string="Chức vụ", required=True)
 
     @api.depends("ho_ten_dem", "ten")
     def _compute_ho_va_ten(self):
